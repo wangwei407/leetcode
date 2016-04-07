@@ -31,6 +31,24 @@ def mergeTwoLists(self, l1, l2):
             start.next = self.mergeTwoLists(l1, l2.next)
 
         return start
-```        
+```    
+##### java的简单求解
+```java
+public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    ListNode dummy = new ListNode(-1);
+    ListNode cur = dummy;
+    cur.next =  l1;
+    while(l1 != null && l2 != null) {
+        if(l1.val > l2.val) {
+            cur.next = l2;
+            l2 = l1;
+        }
+        cur = cur.next;
+        l1 = cur.next;
+    }
+    if(l2 != null) cur.next = l2;
+    return dummy.next;
+}
+```
 
 
