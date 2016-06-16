@@ -20,7 +20,9 @@ Objects of type Scanner are useful for breaking down formatted input into tokens
 
 ## Formatting
 Stream objects that implement formatting are instances of either PrintWriter, a character stream class, or PrintStream, a byte stream class（读完输出格式化）
+[formate guidance](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax)
 
+## [Data Streams](https://docs.oracle.com/javase/tutorial/essential/io/datastreams.html)
 
 ## <a name="2">Exception e</a>
 
