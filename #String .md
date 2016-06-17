@@ -2,6 +2,7 @@
 [345 Reverse Vowels of a String](#345)  
 [151 Reverse Words in a String](#151)  
 [205 Isomorphic Strings](#205)
+[249 Group Shifted Strings](#249)
 #<a name="345">345 Reverse Vowels of a String</a>
 
 ## Write a function that takes a string as input and reverse only the vowels of a string.
@@ -141,7 +142,7 @@ public boolean isIsomorphic(String s1,String s2){
     }
 }
 ```
-#### java solution
+#### python solution
 ```python
 def isIsomorphic1(self, s, t):
     d1, d2 = {}, {}
@@ -156,7 +157,7 @@ def isIsomorphic2(self, s, t):
     for i, val in enumerate(s):
         d1[ord(val)].append(i)
     for i, val in enumerate(t):
-        d2[ord(val)].append(i)
+        d2[ord(val)].append(i) 
     return sorted(d1) == sorted(d2)
 
 def isIsomorphic3(self, s, t):
@@ -177,3 +178,6 @@ def isIsomorphic(self, s, t):
         d2[ord(t[i])] = i+1
     return True
 ```
+#<a name="249">249.Group Shifted Strings</a>
+
+
