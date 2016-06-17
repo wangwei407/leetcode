@@ -1,8 +1,9 @@
 #String
 [345 Reverse Vowels of a String](#345)  
 [151 Reverse Words in a String](#151)  
-[205 Isomorphic Strings](#205)
+[205 Isomorphic Strings](#205)  
 [249 Group Shifted Strings](#249)
+
 #<a name="345">345 Reverse Vowels of a String</a>
 
 ## Write a function that takes a string as input and reverse only the vowels of a string.
