@@ -180,4 +180,47 @@ def isIsomorphic(self, s, t):
 ```
 #<a name="249">249.Group Shifted Strings</a>
 
+## 思路：用每个string的每个字符和string[0]来计算 来获得分组的key 
+### python solution
+```python
+class Solution(object):
+	def groupStrings(self,strings):
+	"""
+        :type strings: List[str]
+        :rtype: List[List[str]]
+        """
+        key=lambda s:[(ord(c)-ord(s[0])%26 for c in s]
+        return [list(group) for key,group in itertools.groupby(sorted(strings,key=key)),key]
+```
+### java solution
+```java
+public class Solution {
+    public List<List<String>> groupStrings(String[] strings) {
+	List<List<String>> result=new ArrayList<>();
+	Map<String, List<String>> map=new HashMap<>();
+	for(String s: strings){
+	    String key=getBits(s);
+	    if(!map.containsKey(key)) map.put(key,new ArrayList());
+	    map.get(key).add(s);
+	}
+	for(String key:map.keySet()){
+	    List<String> ans=map.get(key);
+	    Collections.sort(ans);
+	    result.add(ans);
+	}
+	return ans;
+    }
+    private String getBits(String s){
+	int l=s.length();
+	int s0=s.charAt(0);
+	int [] ans=new int[l];
+	for(int i=0; i<l; i++){
+	    ans[i]=s.charAt(i)-s0<0 ? (s.charAt(i)-s0)%26+26 : s.charAt(i)-s0;
+	}
+    }
+}
+```
+        
+	
+
 
