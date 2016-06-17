@@ -1,4 +1,14 @@
-# python list分片
+[分片](#1)
+
+[zip函数](#2)
+
+[format用法](#3)
+
+[sorted](#4)
+
+[groupby](#5)
+
+# <a name="1">python list分片</a>
 ### ```list[start:end:step]```
 ```python
 >>> l=range(12)
@@ -17,7 +27,7 @@
 >>> a[:2]
 [0, 1]
 ```
-# python zip函数
+# <a name="2">python zip函数</a>
 ```python
 >>> a=[1,2,3]
 >>> b=[4,5,6]
@@ -26,7 +36,7 @@
 >>> zip(*zipa)
 [(1,2,3),(4,5,6)]
 ```
-# format 用法
+# <a name="3">format 用法</a>
 ## 通过位置
 ```python
 In [1]: '{0},{1}'.format('kzc',18)  
@@ -100,3 +110,12 @@ Out[57]: '11'
 In [47]: '{:,}'.format(1234567890)
 Out[47]: '1,234,567,890'
 ```
+
+# <a name="4">Sorted 用法</a>
+* sorted返回的是一个列表
+* [面向对象的用法](http://www.thegeekstuff.com/2014/06/python-sorted/ )
+
+# <a name="5">Group by</a>
+* groupby 需要一个iteral 以及一个keyfunction 这个iteral是sorted的 才能达到按不同的来分组 不然 他会遇见不同的 就把他的分到一组 不管上一组
+* 
+
